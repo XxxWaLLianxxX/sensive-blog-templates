@@ -75,7 +75,7 @@ def contact(request):
     folium_map = folium.Map(location=COMPANY_COORDINATES, zoom_start=12)
     folium.Marker(
         COMPANY_COORDINATES,
-        tooltip="Мы здесь",
+        tooltip="We are here",
     ).add_to(folium_map)
     html_map = folium_map._repr_html_()
     return render(request, 'contact.html', {"html_map": html_map})
